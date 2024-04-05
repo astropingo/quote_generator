@@ -23,7 +23,7 @@ function removeLoadingSpinner() {
 
 // Show New Quote
 function newQuote() {
-    loading();
+    showLoadingSpinner();
     const quote = localQuotes[Math.floor(Math.random(localQuotes.length) * localQuotes.length)]
     if (!quote.author) {
         authorText.textContent = "Unknown";
@@ -37,7 +37,7 @@ function newQuote() {
         quoteText.classList.remove('long-quote');
     }
     quoteText.textContent = quote.text;
-    complete();
+    removeLoadingSpinner();
 }
 
 // Get Quotes From API
