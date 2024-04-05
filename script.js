@@ -11,13 +11,12 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Show Loading
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteConstainer.hidden = true;
 }
 
-function complete() {
+function removeLoadingSpinner() {
     loader.hidden = true;
     quoteConstainer.hidden = false;
 }
